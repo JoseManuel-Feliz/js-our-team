@@ -47,18 +47,18 @@ for (let i = 0; i < team.length; i++) {
 
     console.table(`Name: ${memberName} Job: ${role} Photo:${imgMember}`)
 
-    card += `
-    <li>
-    <figure>
-    ${imgMember}
-    <figcaption>
-    <h2>Name: ${memberName}</h2>
-    <h3>Job: ${role}</h3>
-    </figcaption>
-    </figure>
-    </li>
-    `
 
+    card += `
+    <div class="col">
+        <div class="card">
+            <img src="./img/${imgMember}" class="card-img-top img-fluid" alt="${memberName} photo">
+            <div class="card-body">
+                <p class="fs-4">Name: ${memberName}</p>
+                <p class="fs-5">Job: ${role}</p>
+            </div>
+        </div>
+    </div>
+    `
 }
 
 teamWrapper.innerHTML = card
