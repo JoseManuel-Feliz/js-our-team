@@ -58,6 +58,7 @@ for (let i = 0; i < team.length; i++) {
     </figure>
     </li>
     `
+
 }
 
 teamWrapper.innerHTML = card
