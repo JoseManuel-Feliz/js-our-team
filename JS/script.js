@@ -35,3 +35,15 @@ const team = [
 ]
 console.table(team[0].member)
 
+//Fase di elaborazione
+
+//* 3. Stampare in console le informazioni nel ordine seguente: nome e cognome, ruolo e la stringa della foto.
+for (let i = 0; i < team.length; i++) {
+    const firstname = team[i].member.name
+    const lastName = team[i].member.lastName
+    const role = team[i].member.job
+    const imgMember = team[i].member.photo
+
+    console.table(`Name: ${firstname} Lastname: ${lastName} Job: ${role} Photo:${imgMember}`)
+
+}
