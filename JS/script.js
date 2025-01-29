@@ -26,12 +26,12 @@ const teamWrapper = document.getElementById('team')
     ? 2a Inserire al suo interno una lista di oggeti per ciascuno dei i dati che sono stati forniti.  */
 const team = [
 
-    { member: { name: 'Wayne', lastName: 'Barnett', job: 'Founder & CEO       ', photo: 'wayne-barnett-founder-ceo.jpg' } },
-    { member: { name: 'Angela ', lastName: 'Caroll', job: 'Chief Editor        ', photo: 'angela-caroll-chief-editor.jpg' } },
-    { member: { name: 'Walter', lastName: 'Gordon', job: 'Office Manager      ', photo: 'walter-gordon-office-manager.jpg' } },
-    { member: { name: 'Angela', lastName: 'Lopez ', job: 'Social Media Manager', photo: 'angela-lopez-social-media-manager.jpg' } },
-    { member: { name: 'Scott', lastName: 'Estrada', job: 'Developer           ', photo: 'scott-estrada-developer.jpg' } },
-    { member: { name: 'Barbara', lastName: ' Ramos', job: 'Graphic Designer    ', photo: 'barbara-ramos-graphic-designer.jpg' } }
+    { name: 'Wayne', lastName: 'Barnett', job: 'Founder & CEO', photo: 'wayne-barnett-founder-ceo.jpg' },
+    { name: 'Angela ', lastName: 'Caroll', job: 'Chief Editor', photo: 'angela-caroll-chief-editor.jpg' },
+    { name: 'Walter', lastName: 'Gordon', job: 'Office Manager', photo: 'walter-gordon-office-manager.jpg' },
+    { name: 'Angela', lastName: 'Lopez ', job: 'Social Media Manager', photo: 'angela-lopez-social-media-manager.jpg' },
+    { name: 'Scott', lastName: 'Estrada', job: 'Developer', photo: 'scott-estrada-developer.jpg' },
+    { name: 'Barbara', lastName: ' Ramos', job: 'Graphic Designer', photo: 'barbara-ramos-graphic-designer.jpg' },
 ]
 console.table(team[0].member)
 
@@ -41,9 +41,9 @@ let card = ''
 //* 3. Stampare in console le informazioni nel ordine seguente: nome e cognome, ruolo e la stringa della foto.
 for (let i = 0; i < team.length; i++) {
     // mi preparo le variabile con l'info dei members
-    const memberName = team[i].member.name + ' ' + team[i].member.lastName
-    const role = team[i].member.job
-    const imgMember = team[i].member.photo
+    const memberName = team[i].name + ' ' + team[i].lastName
+    const role = team[i].job
+    const imgMember = team[i].photo
 
     console.table(`Name: ${memberName} Job: ${role} Photo:${imgMember}`)
 
@@ -53,8 +53,9 @@ for (let i = 0; i < team.length; i++) {
         <div class="card">
             <img src="./img/${imgMember}" class="card-img-top img-fluid" alt="${memberName} photo">
             <div class="card-body">
-                <p class="fs-4">Name: ${memberName}</p>
-                <p class="fs-5">Job: ${role}</p>
+            <h5 class="card-title fs-2 fw-semibold">Member Info</h5>
+                <p class=" card-text fs-4">${memberName}</p>
+                <p class="card-text fs-4">${role}</p>
             </div>
         </div>
     </div>
